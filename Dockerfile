@@ -1,8 +1,4 @@
-FROM gcc:latest
-copy . /d_c
-WORKDIR /d_c
-RUN gcc -o ex1 ex1.c
-CMD ["./ex1"]
-
-
-
+FROM python:3.9
+COPY ex3.py . /d_p/
+WORKDIR /d_p/
+CMD ["python","ex3.py"]
